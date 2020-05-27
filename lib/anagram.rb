@@ -9,7 +9,7 @@ class Anagram
   end
 
   def match(anagrams)
-    list_of_matches = []
+    list_of_matches = anagrams.to_s
     anagrams.each do |anagram|
       #binding.pry
       if anagram == @word
