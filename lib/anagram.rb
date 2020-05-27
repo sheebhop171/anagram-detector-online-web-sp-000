@@ -8,14 +8,8 @@ class Anagram
     @word = word
   end
 
-  def match(anagrams)
-    list_of_matches = anagrams.to_s
-    anagrams.each do |anagram|
-      #binding.pry
-      if anagram == @word
-        list_of_matches << @word
-      else
-      end
-    end
+
+  def match(wordarray)
+    wordarray.collect{|i| i if i.split("").sort == word.split("").sort}.compact
   end
 end
